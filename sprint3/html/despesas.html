@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyTrack - Nova Despesa</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body style="margin: 0; padding: 0;">
+
+    <div class="layout-sistema">
+        <div class="janela-aplicativo">
+
+            <aside class="sidebar">
+                <div class="sidebar-topo">
+                    <a href="dashboard.html" class="logo-moneytrack">
+                        <i class="bx bx-trending-up"></i>
+                        Money<span>Track</span>
+                    </a>
+                    <ul class="menu-links">
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="bx bx-grid-alt"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transacoes.html">
+                                <i class="bx bx-transfer"></i>
+                                Transações
+                            </a>
+                        </li>
+                        <li>
+                            <a href="metas.html">
+                                <i class="bx bx-target-lock"></i>
+                                Metas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="categorias.html">
+                                <i class="bx bx-folder"></i>
+                                Categorias
+                            </a>
+                        </li>
+                        <li>
+                            <a href="perfil.html">
+                                <i class="bx bx-user"></i>
+                                Perfil
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="login.html" class="btn-sair-sidebar">
+                    <i class="bx bx-log-out"></i>
+                    Sair
+                </a>
+            </aside>
+
+            <main class="conteudo-principal">
+                <div class="topo-dashboard">
+                    <h2>Transações <span style="font-size: 16px; color: var(--cinza-claro);"> > Nova Despesa</span></h2>
+                </div>
+
+                <div class="grid-duas-colunas">
+                    <section class="caixa-branca">
+                        <h3 style="color: #ef4444;"><i class="bx bx-minus-circle"></i> Nova Despesa</h3>
+
+                        <form action="MovimentacaoServlet" method="POST">
+                            <input type="hidden" name="tipo" value="D">
+
+                            <div class="campo">
+                                <label for="descricao">Nome da despesa</label>
+                                <div class="campo-wrapper">
+                                    <i class="bx bx-edit-alt"></i>
+                                    <input type="text" id="descricao" name="descricao" placeholder="Ex: Mercado, Aluguel, Lanche..." required>
+                                </div>
+                            </div>
+
+                            <div class="campo">
+                                <label for="valor">Valor</label>
+                                <div class="campo-wrapper">
+                                    <i class="bx bx-dollar"></i>
+                                    <input type="number" id="valor" name="valor" step="0.01" placeholder="0.00" required>
+                                </div>
+                            </div>
+
+                            <div class="campo">
+                                <label for="data_mov">Data</label>
+                                <div class="campo-wrapper">
+                                    <i class="bx bx-calendar"></i>
+                                    <input type="date" id="data_mov" name="data_mov" required>
+                                </div>
+                            </div>
+
+                            <div class="campo">
+                                <label for="id_categoria">Categoria (opcional)</label>
+                                <div class="campo-wrapper">
+                                    <i class="bx bx-tag"></i>
+                                    <select id="id_categoria" name="id_categoria">
+                                        <option value="">Selecione uma categoria</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="botoes-form">
+                                <a href="dashboard.html" class="btn-cancelar">Cancelar</a>
+                                <button type="submit" class="btn-verde" style="width: auto; background-color: #ef4444;">Salvar Despesa</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section class="caixa-branca">
+                        <h3 style="color: #ef4444;"><i class="bx bx-list-ul"></i> Despesas recentes</h3>
+                        <ul class="lista-recentes">
+                        </ul>
+                    </section>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="../js/despesas.js"></script>
+    <script src="../js/modo-escuro.js"></script>
+</body>
+</html>

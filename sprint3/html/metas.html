@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MoneyTrack - Criar Meta</title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <link rel="stylesheet"
+          href="../css/estilo.css">
+
+</head>
+
+<body>
+
+<div class="layout-sistema">
+
+    <div class="janela-aplicativo">
+
+
+        <aside class="sidebar">
+            <div class="sidebar-topo">
+
+                <a href="dashboard.html" class="logo-moneytrack">
+                    <i class="bx bx-trending-up"></i>
+                    Money<span>Track</span>
+                </a>
+
+                <ul class="menu-links">
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="bx bx-grid-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transacoes.html">
+                            <i class="bx bx-transfer"></i>
+                            Transações
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="metas.html">
+                            <i class="bx bx-target-lock"></i>
+                            Metas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categorias.html">
+                            <i class="bx bx-folder"></i>
+                            Categorias
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="perfil.html">
+                            <i class="bx bx-user"></i>
+                            Perfil
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <a href="login.html" class="btn-sair-sidebar">
+                <i class="bx bx-log-out"></i>
+                Sair
+            </a>
+
+        </aside>
+
+        <main class="conteudo-principal">
+                <div class="topo-dashboard">
+
+                    <h2>
+
+                        Metas
+
+                        <span class="subtitulo-pagina">
+
+                            > Nova Meta
+
+                        </span>
+
+                    </h2>
+
+                </div>
+
+                <div class="meta-wrapper">
+
+                    <section class="card-meta">
+
+                        <h3>
+
+                            <i class="bx bx-target-lock"></i>
+
+                            Criar Nova Meta Financeira
+
+                        </h3>
+
+                        <form id="form-meta" action="#" method="POST">
+
+                            <div class="campo-meta">
+
+                                <label for="nome">
+
+                                    Nome do Objetivo
+
+                                </label>
+
+                                <div class="campo-wrapper">
+
+                                    <i class="bx bx-trophy"></i>
+
+                                    <input type="text"
+                                           id="nome"
+                                           name="nome"
+                                           placeholder="Ex: Comprar Carro, Viagem..."
+                                           required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="campo-meta">
+
+                                <label for="valor_objetivo">
+
+                                    Valor Alvo
+
+                                </label>
+
+                                <div class="campo-wrapper">
+
+                                    <i class="bx bx-dollar"></i>
+
+                                    <input type="number"
+                                           step="0.01"
+                                           id="valor_objetivo"
+                                           name="valor_objetivo"
+                                           placeholder="0.00"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="campo-meta">
+
+                                <label for="valor_atual">
+
+                                    Valor Inicial Guardado
+
+                                </label>
+
+                                <div class="campo-wrapper">
+
+                                    <i class="bx bx-archive-in"></i>
+
+                                    <input type="number"
+                                           step="0.01"
+                                           id="valor_atual"
+                                           name="valor_atual"
+                                           value="0.00"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="campo-meta">
+
+                                <label for="data_inicio">
+
+                                    Data de Início
+
+                                </label>
+
+                                <div class="campo-wrapper">
+
+                                    <i class="bx bx-calendar-check"></i>
+
+                                    <input type="date"
+                                           id="data_inicio"
+                                           name="data_inicio"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="campo-meta">
+
+                                <label for="data_limite">
+
+                                    Data Limite
+
+                                </label>
+
+                                <div class="campo-wrapper">
+
+                                    <i class="bx bx-calendar-exclamation"></i>
+
+                                    <input type="date"
+                                           id="data_limite"
+                                           name="data_limite"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="botoes-meta">
+
+                                <a href="dashboard.html"
+                                   class="btn-cancelar">
+
+                                    Cancelar
+
+                                </a>
+
+                                <button type="submit"
+                                        class="btn-meta">
+
+                                    Salvar Meta
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </section>
+
+                    <section class="card-meta">
+                        <h3>
+                            <i class="bx bx-list-ul"></i>
+                            Metas Salvas
+                        </h3>
+                        <div class="lista-metas" id="lista-metas">
+                            <p style="color: #94a3b8;">Nenhuma meta cadastrada ainda.</p>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+    <script src="../js/metas.js"></script>
+    <script src="../js/modo-escuro.js"></script>
+</body>
+</html>

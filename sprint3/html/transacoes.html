@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+        <title>MoneyTrack - Histórico de Transações</title>
+
+        <link rel="stylesheet"
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+        <link rel="stylesheet"
+            href="../css/estilo.css">
+
+    </head>
+
+    <body>
+
+    <div class="layout-sistema">
+
+        <div class="janela-aplicativo">
+
+            <aside class="sidebar">
+                <div class="sidebar-topo">
+
+                    <a href="dashboard.html" class="logo-moneytrack">
+                        <i class="bx bx-trending-up"></i>
+                        Money<span>Track</span>
+                    </a>
+
+                    <ul class="menu-links">
+
+                        <li>
+                            <a href="dashboard.html">
+                                <i class="bx bx-grid-alt"></i>
+                                Dashboard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="transacoes.html">
+                                <i class="bx bx-transfer"></i>
+                                Transações
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="metas.html">
+                                <i class="bx bx-target-lock"></i>
+                                Metas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="categorias.html">
+                                <i class="bx bx-folder"></i>
+                                Categorias
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="perfil.html">
+                                <i class="bx bx-user"></i>
+                                Perfil
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <a href="login.html" class="btn-sair-sidebar">
+                    <i class="bx bx-log-out"></i>
+                    Sair
+                </a>
+
+            </aside>
+
+            <main class="conteudo-principal">
+
+                <div class="dashboard-wrapper">
+
+                    <div class="topo-dashboard">
+
+                        <h2>
+                            Transações
+
+                            <span class="subtitulo-pagina">
+                                > Histórico Geral
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+                    <section class="caixa-branca">
+
+                        <h3>
+                            <i class="bx bx-list-ul"></i>
+                            Todas as Movimentações
+                        </h3>
+
+                        <p class="descricao-pagina">
+                            Lista de receitas e despesas lançadas no sistema.
+                        </p>
+
+                        <form action="TransacoesServlet"
+                            method="GET"
+                            class="filtro-transacoes">
+
+                            <div class="campo-filtro">
+
+                                <label for="filtrarTipo">
+                                    Filtrar por Tipo
+                                </label>
+
+                                <div class="campo-wrapper">
+
+                                    <i class="bx bx-filter-alt"></i>
+
+                                    <select id="filtrarTipo"
+                                            name="filtrarTipo">
+
+                                        <option value="T">
+                                            Todas as transações
+                                        </option>
+
+                                        <option value="R">
+                                            Apenas Receitas
+                                        </option>
+
+                                        <option value="D">
+                                            Apenas Despesas
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <button type="submit"
+                                    class="btn-verde">
+
+                                Filtrar
+
+                            </button>
+
+                        </form>
+
+                        <div class="tabela-container">
+
+                            <table class="tabela-transacoes">
+
+                                <thead>
+
+                                <tr>
+
+                                    <th>Data</th>
+                                    <th>Descrição</th>
+                                    <th>Categoria</th>
+                                    <th>Tipo</th>
+                                    <th class="valor-coluna">Valor</th>
+
+                                </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                <tr>
+
+                                    <td class="texto-cinza">
+                                        --/--/----
+                                    </td>
+
+                                    <td class="descricao-coluna">
+                                        Exemplo de Descrição
+                                    </td>
+
+                                    <td class="texto-cinza">
+                                        Categoria
+                                    </td>
+
+                                    <td>
+                                        <span class="badge-despesa">
+                                            Despesa
+                                        </span>
+                                    </td>
+
+                                    <td class="valor-despesa-coluna">
+                                        R$ 0,00
+                                    </td>
+
+                                </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <script src="../js/transacoes.js"></script>
+    <script src="../js/modo-escuro.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,35 @@
+@echo off
+REM Script para importar SQL - MoneyTrack em D:\xampp
+
+setlocal enabledelayedexpansion
+
+echo.
+echo ========================================
+echo   MoneyTrack - Importar Banco de Dados
+echo ========================================
+echo.
+
+REM Caminho completo do MySQL em D:\
+set MYSQL_BIN=D:\xampp\mysql\bin\mysql.exe
+
+if not exist "%MYSQL_BIN%" (
+    echo [ERRO] Nao encontrei MySQL em: %MYSQL_BIN%
+    echo.
+    pause
+    exit /b 1
+)
+
+echo [OK] MySQL encontrado!
+echo Importando banco de dados...
+echo.
+
+REM Executar o SQL
+"%MYSQL_BIN%" -u root < "%~dp0database\moneytrack.sql"
+
+if %errorlevel% equ 0 (
+    echo [SUCESSO] Banco criado!
+) else (
+    echo [ERRO] Falhou ao importar!
+)
+
+pause

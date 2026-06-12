@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyTrack - Categorias</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+
+<div class="layout-sistema">
+    <div class="janela-aplicativo">
+
+        <!-- Sidebar incluído via sidebar.html -->
+        <aside class="sidebar">
+            <div class="sidebar-topo">
+                <a href="dashboard.html" class="logo-moneytrack">
+                    <i class="bx bx-trending-up"></i>
+                    Money<span>Track</span>
+                </a>
+                <ul class="menu-links">
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="bx bx-grid-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="transacoes.html">
+                            <i class="bx bx-transfer"></i>
+                            Transações
+                        </a>
+                    </li>
+                    <li>
+                        <a href="metas.html">
+                            <i class="bx bx-target-lock"></i>
+                            Metas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="categorias.html">
+                            <i class="bx bx-folder"></i>
+                            Categorias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="perfil.html">
+                            <i class="bx bx-user"></i>
+                            Perfil
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="login.html" class="btn-sair-sidebar">
+                <i class="bx bx-log-out"></i>
+                Sair
+            </a>
+        </aside>
+
+        <main class="conteudo-principal">
+
+            <div class="dashboard-wrapper">
+
+                <div class="topo-dashboard">
+                    <h2>Categorias<span class="subtitulo-pagina">> Gerenciar Categorias</span></h2>
+                </div>
+
+                <div class="categorias-grid">
+                    <section class="card-categoria">
+                        <h3><i class="bx bx-folder-plus"></i>Nova Categoria</h3>
+
+                        <form id="form-categoria" action="#" method="POST">
+
+                            <div class="campo-categoria">
+                                <label for="nome">Nome da Categoria</label>
+                                <div class="campo-wrapper">
+                                    <i class="bx bx-bookmark"></i>
+
+                                    <input type="text" 
+                                    id="nome" 
+                                    name="nome"
+                                    placeholder="Ex: Mercado, Assinaturas, Pets..."
+                                    required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="campo-categoria">
+                                <label for="tipo_categoria">Tipo</label>
+                                <div class="campo-wrapper">
+                                    <i class="bx bx-filter"></i>
+                                    <select id="tipo_categoria" name="tipo_categoria">
+                                        <option value="ambas">Ambas</option>
+                                        <option value="receita">Receita</option>
+                                        <option value="despesa">Despesa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="acoes-categoria">
+                                <a href="dashboard.html" class="btn-cancelar">Cancelar</a>
+
+                                <button type="submit" class="btn-categoria">
+                                    Criar Categoria
+                                </button>
+                            </div>
+
+                        </form>
+                    </section>
+
+                    <section class="card-categoria">
+                        <h3>
+                            <i class="bx bx-bookmarks"></i>
+                            Minhas Categorias
+                        </h3>
+
+                        <ul class="lista-categorias">
+                        </ul>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+    <script src="../js/categorias.js"></script>
+    <script src="../js/modo-escuro.js"></script>
+</body>
+</html>

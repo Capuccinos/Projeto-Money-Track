@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyTrack - Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+
+<div class="layout-sistema">
+
+    <div class="janela-aplicativo">
+
+        <aside class="sidebar">
+            <div class="sidebar-topo">
+
+                <a href="dashboard.html" class="logo-moneytrack">
+                    <i class="bx bx-trending-up"></i>
+                    Money<span>Track</span>
+                </a>
+
+                <ul class="menu-links">
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="bx bx-grid-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="transacoes.html">
+                            <i class="bx bx-transfer"></i>
+                            Transações
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="metas.html">
+                            <i class="bx bx-target-lock"></i>
+                            Metas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categorias.html">
+                            <i class="bx bx-folder"></i>
+                            Categorias
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="perfil.html">
+                            <i class="bx bx-user"></i>
+                            Perfil
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <a href="login.html" class="btn-sair-sidebar">
+                <i class="bx bx-log-out"></i>
+                Sair
+            </a>
+
+        </aside>
+
+        <main class="conteudo-principal">
+
+            <div class="dashboard-wrapper">
+
+                <div class="topo-dashboard">
+
+                    <h2>Dashboard</h2>
+
+                    <div class="usuario-info">
+                        <a href="perfil.html" class="avatar-simulado">
+                            <i class="bx bx-user"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <section class="cards-container">
+                    <div class="card-moneytrack card-saldo-total">
+
+                        <h3>
+                            <i class="bx bx-wallet"></i>
+                            Saldo Total
+                        </h3>
+
+                        <p class="valor-total">
+                            R$ 0,00
+                        </p>
+
+                        <span class="subtexto-card">
+                            Saldo Atualizado
+                        </span>
+
+                    </div>
+
+                    <div class="card-moneytrack">
+
+                        <h3>
+                            <i class="bx bx-trending-up card-receita-icon"></i>
+                            Receitas
+                        </h3>
+
+                        <p class="valor-receita">
+                            + R$ 0,00
+                        </p>
+
+                        <span class="subtexto-card">
+                            Total acumulado
+                        </span>
+
+                    </div>
+
+                    <div class="card-moneytrack">
+
+                        <h3>
+                            <i class="bx bx-trending-down card-despesa-icon"></i>
+                            Despesas
+                        </h3>
+
+                        <p class="valor-despesa">
+                            - R$ 0,00
+                        </p>
+
+                        <span class="subtexto-card">
+                            Total acumulado
+                        </span>
+
+                    </div>
+
+                </section>
+
+                <div class="acoes-rapidas">
+
+                    <a href="receitas.html"
+                    class="btn-acao receita-btn">
+
+                        <i class="bx bx-plus-circle"></i>
+                        Adicionar Receita
+
+                    </a>
+
+                    <a href="despesas.html"
+                    class="btn-acao despesa-btn">
+
+                        <i class="bx bx-minus-circle"></i>
+                        Adicionar Despesa
+
+                    </a>
+
+                    <a href="metas.html"
+                    class="btn-acao meta-btn">
+
+                        <i class="bx bx-target-lock"></i>
+                        Metas Financeiras
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+<script src="../js/dashboard.js"></script>
+<script src="../js/modo-escuro.js"></script>
+</html>
